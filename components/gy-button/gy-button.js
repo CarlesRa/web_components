@@ -3,6 +3,16 @@ const DEFAULT_CSS_CLASS = 'default';
 export class GYButton extends HTMLElement {
     buttonTemplate = `
         <style>
+            
+        </style>
+        <button 
+            id="gy-button" 
+            class="btn">
+            ${ this.text ?? 'Button' }
+        </button>
+    `;
+    buttonTemplate = `
+        <style>
             button {
                 padding: 5px; 
                 border-radius: 5px; 
