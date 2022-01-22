@@ -1,6 +1,6 @@
 export class MyCounter extends HTMLElement {
     constructor() {
-        console.log('MyCounter charged')
+        console.log('%c Component: Counter', 'color: #bada55');
         super();
         this.shadow = this.attachShadow({ mode: 'open' });
     }

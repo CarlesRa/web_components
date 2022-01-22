@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script type="module" src="./modules/main.modules.js"></script>
+    <script type="module" src="./components/main.modules.js"></script>
 </head>
 <body>
-    <h1>HOla color</h1>
+    <h1>Hola color</h1>
     <hola-mundo name="Carlos" surname='Ramos' color='blue' onclick="console.log('hola')"></hola-mundo>
     <my-counter count='10'></my-counter>
     <br>
-    <gy-button text='Start' gy-style='{ "color": "red", "fontSyze": "2rem" }'></gy-button>
+    <br>
+    <gy-button text='Start' type='magenta'></gy-button>
+    <gy-button text='END' type='blue'></gy-button>
+    <gy-button class="btn"></gy-button>
 </body>
 </html>

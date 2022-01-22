@@ -1,8 +1,8 @@
 export class HolaMundo extends HTMLElement {
     constructor() {
-        console.log('HolaMundo charged')
+        console.log('%c Component: HolaMundo', 'color: #bada55');
         super();
-        this.shadow = this.attachShadow({mode: 'open'})
+        this.shadow = this.attachShadow({mode: 'closed'})
         this.nameValue;
         this.surname;
     }

@@ -1,3 +1,3 @@
 import { HolaMundo } from './holaMundo.js';
 import { MyCounter } from './counter.js';
-import { GravityButton } from './buttons.js';
+import { GYButton } from './gy-button/gy-button.js';
