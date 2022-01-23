@@ -82,16 +82,7 @@ export class GYButton extends HTMLElement {
         this.shadow.appendChild(template.content.cloneNode(true));
         this.btn = this.shadow.querySelector('#gy-button');
         this.btn.addEventListener('click', this.emmitEvent.bind(this));
-        switch(this.type) {
-            case 'blue':
-                this.btn.className = this.type;
-                break;
-            case 'magenta': 
-                this.btn.className = this.type;
-                break;
-            default :
-                this.btn.className = DEFAULT_CSS_CLASS;
-        }
+        this.btn.className = this.type ?? DEFAULT_CSS_CLASS;
     }
 }
 customElements.define('gy-button', GYButton);
