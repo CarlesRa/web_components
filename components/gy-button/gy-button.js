@@ -3,16 +3,6 @@ const DEFAULT_CSS_CLASS = 'default';
 export class GYButton extends HTMLElement {
     buttonTemplate = `
         <style>
-            
-        </style>
-        <button 
-            id="gy-button" 
-            class="btn">
-            ${ this.text ?? 'Button' }
-        </button>
-    `;
-    buttonTemplate = `
-        <style>
             button {
                 padding: 5px; 
                 border-radius: 5px; 
@@ -72,7 +62,7 @@ export class GYButton extends HTMLElement {
     attributeChangedCallback(prop, oldValue, newValue) {
         switch(prop) {
             case 'text': 
-                
+
                 break;
             case 'type':
                 
@@ -80,11 +70,18 @@ export class GYButton extends HTMLElement {
         }
     }
 
+    emmitEvent() {
+        const messageEvent = new CustomEvent('message', {
+            bubbles: true
+        });
+        this.btn.dispatchEvent(messageEvent);
+    }
+
     render() {
         template.innerHTML = this.buttonTemplate;
         this.shadow.appendChild(template.content.cloneNode(true));
         this.btn = this.shadow.querySelector('#gy-button');
-        this.btn.addEventListener('click', () => console.log('clicked gyButton'));
+        this.btn.addEventListener('click', this.emmitEvent.bind(this));
         switch(this.type) {
             case 'blue':
                 this.btn.className = this.type;
